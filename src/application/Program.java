@@ -13,7 +13,7 @@ import model.exceptions.DomainException;
 
 public class Program {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -44,13 +44,15 @@ public class Program {
 			System.out.println("Reservation: " + reservation);
 			
 		}
-		catch(RuntimeException a) {
-			System.out.println("Unexpected Error");
-		}
+		
 		catch(DomainException e) {
 			System.out.println(e.getMessage());
 		}
 		
+		catch(RuntimeException a) {
+			System.out.println("Unexpected Error");
+		}
+	
 		
 			
 		
